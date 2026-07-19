@@ -7,10 +7,10 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: 'localhost',
+   host: '127.0.0.1',
   user: 'root',
   password: '',
-  database: 'notes_db'
+  database: 'notes_db',
 });
 
 // GET all notes
@@ -49,4 +49,4 @@ app.delete('/api/notes/:id', (req, res) => {
   });
 });
 
-app.listen(5002, () => console.log('Server running on port 5002'));
+app.listen(5000, () => console.log('Server running on port 5000'));
